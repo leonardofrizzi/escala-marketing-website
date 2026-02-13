@@ -1,0 +1,128 @@
+<script setup lang="ts">
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { Video, Palette, Clapperboard, ImagePlus, CheckCircle, ArrowLeft } from 'lucide-vue-next'
+
+const pageRef = ref<HTMLElement>()
+
+const beneficios = [
+  'Vídeos narrados com roteiros persuasivos focados em venda',
+  'Edições dinâmicas para Reels, Stories e TikTok',
+  'Fotografias profissionais de produtos e ambientes',
+  'Design de peças para anúncios no Google e Meta',
+  'Criação de identidade visual para campanhas',
+  'Conteúdo adaptado para cada plataforma e formato',
+]
+
+const etapas = [
+  { numero: '01', titulo: 'Briefing Criativo', descricao: 'Entendemos seu negócio, público e tom de voz para criar conteúdo que represente sua marca e venda.', icon: Palette },
+  { numero: '02', titulo: 'Roteiro e Storyboard', descricao: 'Criamos roteiros persuasivos e planejamos cada cena para máximo impacto em poucos segundos.', icon: Clapperboard },
+  { numero: '03', titulo: 'Produção Profissional', descricao: 'Gravamos, fotografamos e editamos com qualidade profissional, narração e motion graphics.', icon: Video },
+  { numero: '04', titulo: 'Entrega Otimizada', descricao: 'Entregamos os criativos nos formatos ideais para cada plataforma, prontos para rodar nos anúncios.', icon: ImagePlus },
+]
+
+onMounted(() => {
+  if (import.meta.server) return
+  gsap.registerPlugin(ScrollTrigger)
+
+  if (pageRef.value) {
+    gsap.from(pageRef.value.querySelectorAll('.animate-in'), {
+      opacity: 0, y: 40, duration: 0.7, stagger: 0.12, ease: 'power3.out', delay: 0.2,
+    })
+    gsap.from(pageRef.value.querySelectorAll('.animate-scroll'), {
+      opacity: 0, y: 40, duration: 0.7, stagger: 0.1, ease: 'power3.out',
+      scrollTrigger: { trigger: '.animate-scroll', start: 'top 85%' },
+    })
+  }
+})
+
+useHead({ title: 'Criativos de Alta Conversão - Produção Audiovisual | Escala Digital' })
+</script>
+
+<template>
+  <div ref="pageRef">
+    <section class="pb-20 pt-32 md:pt-40">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <NuxtLink to="/" class="animate-in mb-8 inline-flex items-center gap-2 text-sm font-light text-white/40 transition-colors hover:text-white">
+          <ArrowLeft :size="16" :stroke-width="1.5" />
+          Voltar para Home
+        </NuxtLink>
+
+        <div class="grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
+          <div>
+            <div class="animate-in mb-6 flex items-center gap-3">
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/5">
+                <Video :size="24" :stroke-width="1.5" class="text-white" />
+              </div>
+              <p class="text-xs font-medium uppercase tracking-[0.25em] text-white/40">Produção Audiovisual</p>
+            </div>
+
+            <h1 class="animate-in text-3xl font-extralight leading-tight tracking-tight text-white md:text-5xl lg:text-6xl">
+              Criativos de <span class="font-medium">Alta Conversão</span>
+            </h1>
+
+            <p class="animate-in mt-6 max-w-lg text-lg font-light leading-relaxed text-white/50">
+              Não fazemos apenas posts, fazemos anúncios que vendem. Vídeos narrados, edições dinâmicas e fotografias profissionais focadas em prender a atenção do seu cliente em segundos.
+            </p>
+
+            <p class="animate-in mt-4 text-base font-light italic text-white/35">
+              "Conteúdo que para o scroll e transforma visualizações em vendas."
+            </p>
+
+            <div class="animate-in mt-8">
+              <WhatsAppCta mensagem="Olá! Tenho interesse em Criativos de Alta Conversão para meus anúncios. Gostaria de saber mais!" size="lg" />
+            </div>
+          </div>
+
+          <div class="animate-in rounded-2xl border border-white/[0.08] bg-white/[0.03] p-8 backdrop-blur-sm md:p-10">
+            <h3 class="mb-6 text-lg font-medium text-white">O que está incluso</h3>
+            <ul class="space-y-4">
+              <li v-for="beneficio in beneficios" :key="beneficio" class="flex items-start gap-3">
+                <CheckCircle :size="18" :stroke-width="1.5" class="mt-0.5 shrink-0 text-[#25D366]" />
+                <span class="text-sm font-light leading-relaxed text-white/60">{{ beneficio }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="mb-16">
+          <p class="mb-4 text-sm font-medium uppercase tracking-[0.25em] text-white/40">Passo a passo</p>
+          <h2 class="text-3xl font-extralight tracking-tight text-white md:text-4xl">
+            Como <span class="font-medium">funciona</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div v-for="etapa in etapas" :key="etapa.numero" class="animate-scroll rounded-2xl border border-white/[0.08] bg-white/[0.03] p-8 backdrop-blur-sm">
+            <span class="text-3xl font-extralight text-white/40">{{ etapa.numero }}</span>
+            <div class="mt-4 mb-3 flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5">
+              <component :is="etapa.icon" :size="20" :stroke-width="1.5" class="text-white/70" />
+            </div>
+            <h3 class="mb-2 text-base font-medium text-white">{{ etapa.titulo }}</h3>
+            <p class="text-sm font-light leading-relaxed text-white/45">{{ etapa.descricao }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-10 text-center backdrop-blur-sm md:p-16">
+          <h2 class="text-2xl font-extralight tracking-tight text-white md:text-4xl">
+            Quer criativos que <span class="font-medium">realmente vendem</span>?
+          </h2>
+          <p class="mx-auto mt-4 max-w-lg text-base font-light text-white/50">
+            Chega de conteúdo genérico. Vamos criar anúncios que param o scroll e geram resultados.
+          </p>
+          <div class="mt-8">
+            <WhatsAppCta mensagem="Olá! Quero criativos profissionais para meus anúncios. Podemos conversar?" size="lg" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</template>
