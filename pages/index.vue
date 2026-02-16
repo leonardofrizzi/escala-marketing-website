@@ -225,7 +225,7 @@ onMounted(() => {
             Sobre nós
           </p>
           <h2 class="text-3xl font-extralight tracking-tight text-white md:text-5xl">
-            Quem é a <span class="font-medium">Escala Digital</span>
+            Quem é a <span class="font-medium">Escala Marketing</span>
           </h2>
           <p class="mt-6 text-lg font-light leading-relaxed text-white/50">
             Somos uma agência de marketing digital com um objetivo claro: escalar os resultados do seu negócio. Acreditamos que toda empresa merece uma presença digital forte, estratégias inteligentes e resultados reais — não métricas de vaidade.
@@ -297,7 +297,7 @@ onMounted(() => {
 
           <!-- Email -->
           <a
-            href="mailto:contato@escaladigital.com"
+            href="mailto:contato@escalamarketing.com"
             class="group relative overflow-hidden rounded-2xl border border-white/[0.08] p-8 transition-all duration-300 hover:border-blue-400/30 md:p-10"
           >
             <div class="absolute inset-0 bg-gradient-to-br from-blue-400/10 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -307,7 +307,7 @@ onMounted(() => {
               </div>
               <h3 class="mb-2 text-lg font-medium text-white">E-mail</h3>
               <p class="text-sm font-light text-white/50">Para propostas e parcerias</p>
-              <p class="mt-3 text-sm font-light text-blue-400 transition-colors group-hover:text-blue-400">contato@escaladigital.com</p>
+              <p class="mt-3 text-sm font-light text-blue-400 transition-colors group-hover:text-blue-400">contato@escalamarketing.com</p>
             </div>
           </a>
         </div>

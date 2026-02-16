@@ -46,7 +46,7 @@ onMounted(() => {
   }
 })
 
-useHead({ title: 'Gestão de Tráfego Pago - Google Ads & Meta Ads | Escala Digital' })
+useHead({ title: 'Gestão de Tráfego Pago - Google Ads & Meta Ads | Escala Marketing' })
 </script>
 
 <template>

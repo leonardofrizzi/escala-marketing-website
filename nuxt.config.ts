@@ -5,14 +5,14 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Escala Digital - Agência de Marketing Digital',
+      title: 'Escala Marketing - Agência de Marketing Digital',
       htmlAttrs: { lang: 'pt-BR' },
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
           name: 'description',
-          content: 'Escala Digital - Agência de marketing digital especializada em escalar resultados para o seu negócio.',
+          content: 'Escala Marketing - Agência de marketing digital especializada em escalar resultados para o seu negócio.',
         },
         { name: 'format-detection', content: 'telephone=no' },
       ],

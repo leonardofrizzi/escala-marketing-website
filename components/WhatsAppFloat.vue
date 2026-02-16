@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const numero = '5500000000000'
-const mensagem = 'Olá! Gostaria de saber mais sobre os serviços da Escala Digital.'
+const mensagem = 'Olá! Gostaria de saber mais sobre os serviços da Escala Marketing.'
 const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`
 </script>
 

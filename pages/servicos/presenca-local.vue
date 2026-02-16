@@ -36,7 +36,7 @@ onMounted(() => {
   }
 })
 
-useHead({ title: 'Presença Local Profissional - Google Meu Negócio | Escala Digital' })
+useHead({ title: 'Presença Local Profissional - Google Meu Negócio | Escala Marketing' })
 </script>
 
 <template>

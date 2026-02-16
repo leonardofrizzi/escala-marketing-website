@@ -42,7 +42,7 @@ onUnmounted(() => {
       <NuxtLink to="/" class="relative z-10" @click="closeMobile">
         <img
           src="/escalamarketing.webp"
-          alt="Escala Digital"
+          alt="Escala Marketing"
           class="h-12 w-auto"
         >
       </NuxtLink>

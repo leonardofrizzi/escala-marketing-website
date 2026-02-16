@@ -4,7 +4,7 @@ const props = withDefaults(defineProps<{
   texto?: string
   size?: 'sm' | 'md' | 'lg'
 }>(), {
-  mensagem: 'Olá! Gostaria de saber mais sobre os serviços da Escala Digital.',
+  mensagem: 'Olá! Gostaria de saber mais sobre os serviços da Escala Marketing.',
   texto: 'Fale Conosco pelo WhatsApp',
   size: 'md',
 })

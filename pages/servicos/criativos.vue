@@ -36,7 +36,7 @@ onMounted(() => {
   }
 })
 
-useHead({ title: 'Criativos de Alta Conversão - Produção Audiovisual | Escala Digital' })
+useHead({ title: 'Criativos de Alta Conversão - Produção Audiovisual | Escala Marketing' })
 </script>
 
 <template>

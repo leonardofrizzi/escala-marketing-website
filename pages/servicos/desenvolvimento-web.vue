@@ -36,7 +36,7 @@ onMounted(() => {
   }
 })
 
-useHead({ title: 'Sites e Landing Pages - Desenvolvimento Web | Escala Digital' })
+useHead({ title: 'Sites e Landing Pages - Desenvolvimento Web | Escala Marketing' })
 </script>
 
 <template>
